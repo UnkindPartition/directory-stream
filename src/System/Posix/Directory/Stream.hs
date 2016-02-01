@@ -18,7 +18,8 @@ import Control.Monad
 import Control.Monad.Catch
 import Control.Monad.IO.Class
 
--- | Return the directory contents as a 'Stream'.
+-- | Return the directory contents as a 'Stream'. The stream does not
+-- include @.@ and @..@ entries.
 --
 -- 'S.MonadResource' is used to close the POSIX directory
 -- stream.
