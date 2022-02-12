@@ -1,27 +1,28 @@
 name:                directory-stream
 version:             1.0
 synopsis:            Read directory entries as a stream of ByteStrings
--- description:         
+-- description:
 homepage:            https://github.com/feuerbach/directory-stream
 license:             MIT
 license-file:        LICENSE
 author:              Roman Cheplyaka
 maintainer:          roma@ro-che.info
--- copyright:           
+-- copyright:
 category:            System
 build-type:          Simple
 cabal-version:       >=1.10
 
 library
   exposed-modules:     System.Posix.Directory.Stream
-  -- other-modules:       
-  -- other-extensions:    
+  -- other-modules:
+  -- other-extensions:
   build-depends:       base < 5,
                        unix,
-                       streaming,
+                       streaming >= 0.2,
                        bytestring,
                        transformers,
-                       exceptions
+                       exceptions,
+                       resourcet
   hs-source-dirs:      src
   default-language:    Haskell2010
   ghc-options:         -Wall
